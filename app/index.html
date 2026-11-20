@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Leonida Field Manual — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies: roadmap to the platinum, missable flags, cited guides, progress saved in your browser.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23101408'/%3E%3Cpath d='M16 4 L26 16 L16 28 L6 16 Z' fill='none' stroke='%23e8b33c' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23e8b33c'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">◆</div>
+      <div>
+        <h1>The Leonida Field Manual</h1>
+        <p class="tagline">GTA VI &middot; PlayStation 5 &middot; 55 trophies &middot; 1 platinum &middot; 1,350 PTS &middot; offline, no account, no network</p>
+      </div>
+    </div>
+    <div class="masthead-actions">
+      <button id="btn-demo" type="button" title="Tick the 18 Phase-1 story trophies a first playthrough earns">Load demo progress</button>
+      <button id="btn-export" type="button" title="Download your progress as a JSON file">Export</button>
+      <label class="import-label" title="Restore progress from an exported JSON file">Import<input id="file-import" type="file" accept=".json,application/json" hidden></label>
+      <button id="btn-reset" type="button" title="Clear all earned ticks and counters">Reset</button>
+    </div>
+  </div>
+</header>
+
+<div id="audit" class="audit" role="status" aria-label="Guide audit"></div>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" data-view="tracker" class="tab active">Tracker</button>
+  <button type="button" data-view="roadmap" class="tab">Roadmap</button>
+  <button type="button" data-view="checklist" class="tab">100% Checklist</button>
+  <button type="button" data-view="routes" class="tab">Routes</button>
+  <button type="button" data-view="sources" class="tab">Sources &amp; Disputes</button>
+  <button type="button" data-view="missables" class="tab">Missables</button>
+</nav>
+
+<section class="controls" aria-label="Filters">
+  <input id="q" type="search" placeholder="Search a trophy, guide or keyword…" autocomplete="off">
+  <select id="f-grade" aria-label="Filter by grade">
+    <option value="">All grades</option>
+    <option value="platinum">Platinum</option>
+    <option value="gold">Gold</option>
+    <option value="silver">Silver</option>
+    <option value="bronze">Bronze</option>
+  </select>
+  <select id="f-kind" aria-label="Filter by kind">
+    <option value="">All kinds</option>
+    <option value="story">Story</option>
+    <option value="collectible">Collectibles</option>
+    <option value="activity">Activities</option>
+    <option value="side">Side</option>
+    <option value="feat">Feats</option>
+    <option value="crime">Crime</option>
+    <option value="completion">Completion</option>
+  </select>
+  <select id="f-phase" aria-label="Filter by roadmap phase">
+    <option value="">All phases</option>
+    <option value="1">Phase 1 · Story Run</option>
+    <option value="2">Phase 2 · 100% Sweep</option>
+    <option value="3">Phase 3 · Strangers &amp; Cleanup</option>
+    <option value="4">Phase 4 · Platinum</option>
+  </select>
+  <label class="check"><input id="f-missable" type="checkbox"> Missable only</label>
+  <label class="check"><input id="f-remaining" type="checkbox"> Not earned yet</label>
+  <label class="check spoiler"><input id="f-spoiler" type="checkbox" checked> Spoiler mask <span class="hint">hides hidden trophies until earned</span></label>
+</section>
+
+<main id="view" class="view"></main>
+
+<footer class="foot">
+  <p>Every guide is written for this manual, in its own words, and cites its sources beside the steps. Official trophy names, descriptions and grades are as PlayStation publishes them. No Rockstar Games logo, artwork or game screenshot is used anywhere in this guide. The app fetches nothing at run time: all data ships under app/data/ and progress lives only in your browser's localStorage.</p>
+</footer>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
